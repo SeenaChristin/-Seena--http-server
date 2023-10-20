@@ -21,7 +21,6 @@ http
     if (route.includes("delay")) {
       filePath = path.join(directoryName, fileName200);
       delay = route.substring(7, route.length);
-      console.log(delay);
     }
     switch (route) {
       case "/html":
