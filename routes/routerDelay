@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-const idFilter = (req) => (member) => member.id === parseInt(req.params.id);
-
 // Get Single Member
 router.get("/:id", (req, res) => {
   const delay = parseInt(req.params.id);

@@ -1,9 +1,6 @@
 const express = require("express");
-const uuid = require("uuid");
 const router = express.Router();
 const data = require("../data");
-
-const idFilter = (req) => (member) => member.id === parseInt(req.params.id);
 
 // Gets All Members
 router.get("/", (req, res) => res.json(data));

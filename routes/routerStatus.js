@@ -1,9 +1,5 @@
 const express = require("express");
-const uuid = require("uuid");
 const router = express.Router();
-
-const idFilter = (req) => (member) => member.id === parseInt(req.params.id);
-
 // Get Single Member
 router.get("/:id", (req, res) => {
   const status = parseInt(req.params.id);
