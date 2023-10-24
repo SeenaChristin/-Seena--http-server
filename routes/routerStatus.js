@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-// Get Single Member
+
 router.get("/:id", (req, res) => {
   const status = parseInt(req.params.id);
   let msg = "";
-  console.log(status);
   switch (status) {
     case 200:
       msg = "OK";
@@ -20,7 +19,7 @@ router.get("/:id", (req, res) => {
       break;
   }
 
-  if (status) {
+  if (msg != "") {
     res.json({ Status: `Status:${req.params.id} `, message: msg });
   } else {
     res.status(400).json({ msg: `No member with the id of ${req.params.id}` });
